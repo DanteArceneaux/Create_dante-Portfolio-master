@@ -1,27 +1,35 @@
 
-
 // animate on scroll
+
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.test', { 
-    x:300, 
-    duration:22, 
-    scrollTrigger: {
-        trigger: '.test', 
-        start: 'top 80%', 
-        end: 'top 10%', 
-        scrub: true, 
-        toggleActions: 'restart none resume complete',
-        // markers: {
-        //     startColor: "purple", 
-        //     endColor: 'fuchsia', 
-        //     fontSize: '3rem',
-        // }, 
-       
-    },
-})
+gsap.to(".test", {
+	x: 300,
+	scrollTrigger: {
+		trigger: ".test",
+		start: "top 80%",
+		end: "top 10%",
+		scrub: 3,
+		toggleActions: "restart none resume complete",
+		// markers: {
+		//     startColor: "purple",
+		//     endColor: 'fuchsia',
+		//     fontSize: '3rem',
+		// },
+	},
+});
 
+// Magic Mouse
 
+options = {
+	cursorOuter: "enable",
+	hoverEffect: "pointer-blur",
+	hoverItemMove: false,
+	defaultCursor: false,
+	outerWidth: 30,
+	outerHeight: 30,
+};
+magicMouse(options);
 // Animate canvas hero section
 
 const canvas = document.getElementById("canvas1");
@@ -198,6 +206,3 @@ for (let i = 0; i <= elements.length; i++) {
 		elements[i].classList.add("animated");
 	});
 }
-
-
-
